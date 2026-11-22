@@ -1,0 +1,10 @@
+.venv/
+data/
+runs/
+RECS_DAMN.txt
+__pycache__/
+.ipynb_checkpoints/
+*.bin
+*.safetensors
+*.pt
+*.pth
