@@ -1,0 +1,92 @@
+{
+  "track": "nlp",
+  "model": "DeepPavlov/rubert-base-cased",
+  "revision": "4036cab694767a299f2b9e6492909664d9414229",
+  "dataset": "Babelscape/wikineural",
+  "classes": [
+    "LOC",
+    "MISC",
+    "ORG",
+    "PER"
+  ],
+  "n_train": 92320,
+  "n_val": 11540,
+  "n_test": 11580,
+  "params_total": 177269769,
+  "baseline": {
+    "majority": {
+      "f1_micro": 0.5843722774656773,
+      "f1_macro": 0.5089478842707436,
+      "precision": 0.6450885454666048,
+      "recall": 0.5341021416803954
+    },
+    "random_head": {
+      "f1_micro": 0.02264981911602789,
+      "f1_macro": 0.021789890720976004,
+      "precision": 0.012859630583297364,
+      "recall": 0.09489291598023064
+    }
+  },
+  "final": {
+    "f1_micro": 0.9140000549344907,
+    "f1_macro": 0.894692068731966,
+    "precision": 0.9087334097984597,
+    "recall": 0.9193281025527683,
+    "token_f1": 0.9195075372800781,
+    "per_type": {
+      "LOC": {
+        "precision": 0.9541807186882195,
+        "recall": 0.9545137273150303,
+        "f1-score": 0.9543471939517301,
+        "support": 8596
+      },
+      "MISC": {
+        "precision": 0.8402566700439041,
+        "recall": 0.8399729912221472,
+        "f1-score": 0.8401148066858012,
+        "support": 2962
+      },
+      "ORG": {
+        "precision": 0.8308270676691729,
+        "recall": 0.8692232055063913,
+        "f1-score": 0.8495915425276309,
+        "support": 3051
+      },
+      "PER": {
+        "precision": 0.9257801518133258,
+        "recall": 0.9438234451132129,
+        "f1-score": 0.9347147317627021,
+        "support": 3489
+      }
+    }
+  },
+  "ablation": {
+    "type": "freeze",
+    "full": {
+      "f1_micro": 0.9163751639702667,
+      "f1_macro": 0.8917476983293373,
+      "precision": 0.9120879120879121,
+      "recall": 0.9207029104887424,
+      "time_sec": 579.8525831699371,
+      "trainable_params": 177269769
+    },
+    "freeze": {
+      "f1_micro": 0.5237732852463356,
+      "f1_macro": 0.339497023771004,
+      "precision": 0.6588695579788563,
+      "recall": 0.43465129049972545,
+      "time_sec": 219.7009630203247,
+      "trainable_params": 6921
+    }
+  },
+  "errors": {
+    "correct": 16766,
+    "boundary": 432,
+    "type": 773,
+    "missed": 239,
+    "spurious": 389
+  },
+  "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+  "train_time_sec": 579.8525831699371,
+  "fast_mode": false
+}
